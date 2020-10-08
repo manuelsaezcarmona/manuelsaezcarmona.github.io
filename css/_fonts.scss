@@ -1,0 +1,109 @@
+@font-face{
+    font-family:'Galanda Moderna';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Galanda-Moderna.ttf") format("truetype"),
+         url("../fonts/Galanda-Moderna.woff2") format("woff2"),
+         url("../fonts/Galanda-Moderna.eot") format("embedded-opentype"),
+         url("../fonts/Galanda-Moderna.otf") format("opentype"),
+         
+
+}
+
+@font-face{
+    font-family:'Galanda Moderna Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Galanda-Moderna-Light.ttf") format("truetype"),
+         url("../fonts/Galanda-Moderna-Light.woff2") format("woff2"),
+         url("../fonts/Galanda-Moderna-Light.otf") format("opentype"),
+         url("../fonts/Galanda-Moderna-Light.woff") format("woff");
+
+}
+
+@font-face {
+    font-family: 'Jambetica';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Jambetica-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Jambetica';
+    font-style: italic;
+    font-weight: normal;
+    src: url("../fonts/Jambetica-Italic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: 'Jambetica';
+    font-style: normal;
+    font-weight: lighter;
+    src: url("../fonts/Jambetica-Light.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Jambetica';
+    font-style: italic;
+    font-weight: lighter;
+    src: url("../fonts/Jambetica-Light-Italic.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Jambetica';
+    font-style: normal;
+    font-weight: bold;
+    src: url("../fonts/Jambetica-Bold.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: 'Jambetica';
+    font-style: italic;
+    font-weight: bold;
+    src: url("../fonts/Jambetica-Bold-Italic.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: 'Righteous';
+    font-style: normal;
+    font-weight: normal;
+    src: url("../fonts/Righteous-Regular.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: 'Baloo Bhai 2';
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/BalooBhai2-Regular.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Baloo Bhai 2';
+    font-style: normal;
+    font-weight: 500;
+    src: url("../fonts/BalooBhai2-Medium.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Baloo Bhai 2';
+    font-style: normal;
+    font-weight: 600;
+    src: url("../fonts/BalooBhai2-SemiBold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Baloo Bhai 2';
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/BalooBhai2-Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: 'Baloo Bhai 2';
+    font-style: normal;
+    font-weight: 800;
+    src: url("../fonts/BalooBhai2-ExtraBold.ttf") format("truetype");
+  }
+  @import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');
+
+
+
+//Variables de las fuentes
+$title-font: "Galanda Moderna", courier;
+$title-font-light: "Galanda Moderna Light";
+$title-page: 'Baloo Bhai 2';
+$title-section: 'Righteous';
+$parrafo: "Jambetica", Verdana;

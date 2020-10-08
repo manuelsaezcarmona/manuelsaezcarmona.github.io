@@ -1,0 +1,128 @@
+.portfolio-container{
+    margin: 0px 20px;
+}
+
+.work-container {
+    max-width: 1000px;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.work-container .work-thumb{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+    /*Propiedad de profundidad cuanto mayor sea el valor estara en la 
+    capa mas encima ej: capa 2' encima de la capa 1 aunque lo recomendable
+    es numerarlos de 10 en 10 por si necesitamos capas intermedias*/
+    z-index: 20;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+  .work-container .work-thumb img{
+    width: 100%;
+    height: 100%;
+    /*Opcional filtros, en mi caso los quiero poner en escala de grises*/
+    filter: grayscale(100%);
+}
+.work-container .work-thumb img:hover{
+    filter: grayscale(0%);
+    transition: all 1s ease-in-out 0.3s;
+}
+.work-container .work-content{
+    width: 100%;
+    min-height: 250px;
+    padding: 20px;
+    padding-left: 20px;
+    padding-top: 160px;
+    margin-left: 0px;
+    /*El valor negativo hace que el elemento "invada" el que tenga
+    "al lado en este caso a la parte superior"*/
+    margin-top: -140px;
+    text-align: justify;
+    background-color: #ffffff;
+    z-index: 10;
+    border-radius: 20px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+    cursor: default;
+}
+
+.work-container .work-content h2{
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-size: 30px;
+}
+
+.etiqueta {
+    background-color: #cccccc;
+    border-radius: 50px;
+    font-size: 12px;
+    margin: 10;
+    color: #fff;
+    padding: 2px 10px;
+    text-transform: uppercase;
+    
+}
+.fintech{
+    background-color: rgb(104, 199, 9);
+}
+.fintech::after{
+    content: "fintech";
+}
+
+.web{
+    background-color: rgb(199, 9, 34);
+}
+.web::after{
+    content: "web";
+}
+
+
+.hobbies{
+    background-color: rgb(223, 100, 0);
+}
+.hobbies::after{
+    content: "personal";
+}
+
+
+.work-container p{
+    margin: 10px 0;
+}
+.work-btn{
+    float: right;
+    text-decoration: none;
+    background-image: linear-gradient(90deg, #919199, #333333);
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    color: #ffffff;
+}
+
+
+@media (min-width: 767px) {
+    .work-container {
+      flex-direction: row;
+    }
+    .work-container .work-content{
+        width: 100%;
+        padding: 20px;
+        margin-top: 0px;
+        /*El valor negativo hace que el elemento "invada" el que tenga
+        "al lado en este caso a la izquierda"*/
+        margin-left: -140px;
+        /*incremento el padding a la izquierda para que no se solape 
+        con el valor negativo del margin y quede 40px de "hueco"*/
+        padding-left: 180px;
+        padding-top: 20px;
+    }
+    .work-container .work-content h2{
+        font-size: 35px;
+    }
+}

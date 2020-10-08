@@ -1,0 +1,76 @@
+.main-fintech{
+   // background-color: khaki;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+    
+}
+
+.media-container{
+   // background-color: lightblue;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 30% 40% auto;
+    grid-gap: 10px;
+    
+}
+.video-container{
+    grid-area: 2/1;
+    //background-color: lightgreen;
+    
+}
+.video-container iframe{
+    width: 100%;
+    height: 100%;
+    /*width="560" height="315"*/
+}
+
+
+
+.media-container p{
+    margin:0px;
+    padding: 0px 20px;
+    overflow: auto;
+    font-size: 16px;
+    background-color: $gray-light-trans;
+    //border-radius: 15px;
+}
+//Explicacion de un iframe responsive
+// https://cybmeta.com/como-hacer-un-iframe-responsive
+.excel-container{
+    //background-color: lightcoral;
+    position: relative;
+    padding-top: 56.25%;
+    height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+}
+
+.excel-container iframe{
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    
+}
+
+// ---- A partir de un tamaño de tablet
+@media only screen and (min-width: 768px){
+    .media-container{
+        grid-template-columns: 65% auto;
+        grid-template-rows: 70% auto;
+    }
+    .video-container{
+        grid-area: 1/1;
+    }
+    .gallery-container{
+       grid-column: 2/2;
+       grid-row: 1/ span 2;
+    }
+
+}//final mediaquery Tablet
+

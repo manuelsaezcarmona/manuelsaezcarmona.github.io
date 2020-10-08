@@ -1,0 +1,119 @@
+
+  .title-container {
+      width: 100%;
+      height: 3vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px 0 60px 0;
+      transform: translate(-60px, 0px);
+  }
+  .image-container {
+      /*con absolute sacamos el contenedor del flujo y lo colocamos mediante
+      top y left , con porcentaje respecto  a container */
+      position: absolute;
+      /**top: 0%;*/
+      /*left: 50%;*/
+      /*Aqui posicionamos el contenedor de la imagen luego 
+      realizaremos la animacion de la imagen pero siempre
+      en relacion al contenedor*/
+     /*Se traslada de la posicion del container sobre el eje +-Y o +-X */
+     /*con translate saco la imagen del marco aunque su espacio siga ahi*/
+      -webkit-transform: translate(0, -25px);
+      transform: translate(0px, -25px);
+      z-index: 40;
+      /*border: 4px solid blue;*/
+  }
+  
+  .image-container img {
+      /*border: 4px solid brown;*/
+      height: 100px;
+      animation: image-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+      -webkit-animation: image-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+      animation-fill-mode: forwards;
+      -webkit-animation-fill-mode: forwards;
+      filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
+      -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
+  }
+  
+  .texto-container{
+    /*border: 4px solid brown;*/
+    transform: translate( -20px, 0);
+    z-index: 5;
+    }
+  
+  .texto-container h1{
+      font-family: $title-page;
+      font-size: 40px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  
+  .texto-container .fading-effect {
+  /*Lo que hace es pintar esta capa con el mismo color o 
+  imagen que el fondo de la web ocultando el texto del titulo.
+  La animacion va reduciendo el ancho hasta cero y asi aparece 
+  poco a poco el texto. Para evitar el flujo y el espacio fijo
+  la position en absolute. TRUCO: poniento top 0 y botton 0 se fija
+  la altura de la capa a la del elemento padre, text-container
+  para llenar el ancho ponemos el width al 100%
+  La posicion right hace que la direccion del fade se 
+  realice a la izquierda o a la derecha*/
+  /*border: 4px solid yellowgreen;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #e7e8ec;
+  animation: text-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+  -webkit-animation: text-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  }
+  
+  /* ANIMACIONES  */
+  @keyframes image-slide {
+      0% {
+        transform: translatex(-80px) scale(0);
+      }
+      60% {
+        transform:  translatex(-80px) scale(1);
+      }
+      90% {
+        transform:  translatex(120px) scale(1);
+      }
+      100% {
+        transform:  translatex(120px) scale(1);
+      }
+    }
+  
+    @keyframes text-slide {
+      0% {
+        width: 100%;
+      }
+      60% {
+        width: 100%;
+      }
+      77% {
+        width: 0;
+      }
+      100% {
+        width: 0;
+      }
+    }
+    @media screen and (min-width: 768px) {
+      .title-container {
+        height: 6vh;
+      }
+  
+      .image-container img {
+        height: 130px;
+      }
+      .texto-container{
+        transform: translate( -60px, 0);
+      }
+      .texto-container h1{
+        font-size: 40px;
+      }
+    } /*cierre media tablet*/

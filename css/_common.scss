@@ -1,0 +1,65 @@
+//Filosofia mobile first
+// Breakpoints (ojo no depende de dispositivos) solo de como se ve la web 
+// a distintas resoluciones
+// mobile   s 320
+// tablet   m 768
+// desktop  l 1280
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: $parrafo,'Courier New', Courier, monospace;
+    background-image: url("../img/back_s1.jpg");
+    background-position: left;
+    background-repeat: no-repeat;
+    background-origin: padding-box;
+    background-attachment: fixed;
+    background-size: cover;
+    max-width: 768px;
+    //backdrop-filter: blur(5px);
+    //overflow: hidden; 
+    //Posible solucion al scroll pero mejor redimensionar la imagen
+    
+}
+
+
+.container-global{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.buttons{
+        padding-top: 15px;
+        text-align: center;
+}
+    
+.buttons a{
+        display: inline-block;
+        text-transform: capitalize;
+        text-align: center;
+        margin: 5px;
+        border: 1px solid black;
+        text-decoration: none;
+        padding: 6px 12px ;
+        color: black;
+}
+
+.buttons a:visited{
+    color: black;
+}
+
+
+// poder cambiar a 1024px
+@media only screen and (min-width: 768px){
+    body{
+        background-image: url("../img/back_l1.jpg");
+        max-width: 1920px;
+    }
+
+}

@@ -1,0 +1,252 @@
+// variables
+$size-mobile: 36px;
+$height-mobile: 42px;
+$size-desktop: 50px;
+$height-desktop:60px;
+//----------------------------------------------------------------
+
+.content{
+    font-size: $size-mobile;
+    /*Propiedad altura de linea controla el interlineado del texto dentro
+    de la caja. Importante para luego hacer el overflow */
+    height: $height-mobile;
+    line-height: $height-mobile;
+    //border: 1px solid black;
+    /*Esta propiedad oculta los elementos que exceden de la caja*/
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.content .roll-text{
+    margin: 0;
+    padding: 0;
+    padding-right: $height-mobile;  
+    list-style: none;
+    /*border: 1px solid black*/
+}
+
+.content li{
+    margin: 0;
+    line-height: $height-mobile;
+    text-transform: capitalize;
+}
+.one{
+  animation: roll-slow 10s linear 0.5s infinite normal forwards;
+   /*compatibilidad con los navegadores*/
+   -webkit-animation: roll-slow 10s linear 0.5s infinite normal forwards;
+   -moz-animation: roll-slow 10s linear 0.5s infinite normal forwards;
+   -o-animation: roll-slow 10s linear 0.5s infinite normal forwards;
+ }
+ .two{
+   animation: roll 5s linear 0.5s infinite normal forwards;
+   /*compatibilidad con los navegadores*/
+   -webkit-animation: roll 5s linear 0.5s infinite normal forwards;
+   -moz-animation: roll 5s linear 0.5s infinite normal forwards;
+   -o-animation: roll 5s linear 0.5s infinite normal forwards;
+ }
+
+ // Para cuando llegue la parte oscura del fondo de la pagina
+ // Aclarezca la caja del content y sea mas legible.
+ @media only screen and (max-height: 590px) {
+    .content{
+      background-color: #E2E3E525;
+      
+    }
+
+ }
+
+
+ @keyframes roll {
+    /*Truco para realizar una pausa entre medias:
+     realizar un keyframe con la misma posicion.
+     Se trata de una animacion que se queda en el mismo sitio*/
+      0% {
+        margin-top: 0;
+      }
+      25% {
+        margin-top: 0;
+      }
+      50% {
+        margin-top: -$height-mobile;
+      }
+      75% {
+        margin-top: -$height-mobile;
+      }
+      100% {
+        margin-top: 0;
+      }
+    }
+  
+    @keyframes roll-slow {
+      /*Truco para realizar una pausa entre medias:
+       realizar un keyframe con la misma posicion.
+       Se trata de una animacion que se queda en el mismo sitio*/
+        0% {
+          margin-top: 0;
+        }
+        25% {
+          margin-top: 0;
+        }
+        37.5% {
+          margin-top: 0;
+        }
+        50% {
+          margin-top: -$height-mobile;
+        }
+        75% {
+          margin-top: -$height-mobile;
+        }
+        87.5% {
+          margin-top: -$height-mobile;
+        }
+        100% {
+          margin-top: 0;
+        }
+     }
+    /*Compatibilidad con los naveadores*/ 
+    @-webkit-keyframes roll {
+      /*Truco para realizar una pausa entre medias:
+       realizar un keyframe con la misma posicion.
+       Se trata de una animacion que se queda en el mismo sitio*/
+        0% {
+          margin-top: 0;
+        }
+        25% {
+          margin-top: 0;
+        }
+        50% {
+          margin-top: -$height-mobile;
+        }
+        75% {
+          margin-top: -$height-mobile;
+        }
+        100% {
+          margin-top: 0;
+        }
+      }
+      @-webkit-keyframes roll-slow {
+        /*Truco para realizar una pausa entre medias:
+         realizar un keyframe con la misma posicion.
+         Se trata de una animacion que se queda en el mismo sitio*/
+          0% {
+            margin-top: 0;
+          }
+          25% {
+            margin-top: 0;
+          }
+          37.5% {
+            margin-top: 0;
+          }
+          50% {
+            margin-top: -$height-mobile;
+          }
+          75% {
+            margin-top: -$height-mobile;
+          }
+          87.5% {
+            margin-top: -$height-mobile;
+          }
+          100% {
+            margin-top: 0;
+          }
+       }
+
+/** ---- A partir de un tamaño de tablet**/
+@media only screen and (min-width: 768px){
+.content{
+  font-size: $size-desktop;
+  height: $height-desktop;
+  line-height: $height-desktop;
+}
+.content li{
+  line-height: $height-desktop;
+}
+@keyframes roll {
+  0% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -$height-desktop;
+  }
+  75% {
+    margin-top: -$height-desktop;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+@keyframes roll-slow {
+  0% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: 0;
+  }
+  37.5% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -$height-desktop;
+  }
+  75% {
+    margin-top: -$height-desktop;
+  }
+  87.5% {
+    margin-top: -$height-desktop;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+/*Compatibilidad con los naveadores*/ 
+@-webkit-keyframes roll {
+  /*Truco para realizar una pausa entre medias:
+  realizar un keyframe con la misma posicion.
+  Se trata de una animacion que se queda en el mismo sitio*/
+    0% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: -$height-desktop;
+    }
+    75% {
+      margin-top: -$height-desktop;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+@-webkit-keyframes roll-slow {
+  /*Truco para realizar una pausa entre medias:
+  realizar un keyframe con la misma posicion.
+  Se trata de una animacion que se queda en el mismo sitio*/
+    0% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: 0;
+    }
+    37.5% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: -$height-desktop;
+    }
+    75% {
+      margin-top: -$height-desktop;
+    }
+    87.5% {
+      margin-top: -$height-desktop;
+    }
+    100% {
+      margin-top: 0;
+    }
+}
+
+} /*Cierre mediaquery Tablet*/

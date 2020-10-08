@@ -1,0 +1,1929 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Gotu&display=swap");
+@font-face {
+  font-family: 'Galanda Moderna';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Galanda-Moderna.ttf") format("truetype"), url("../fonts/Galanda-Moderna.woff2") format("woff2"), url("../fonts/Galanda-Moderna.eot") format("embedded-opentype"), url("../fonts/Galanda-Moderna.otf") format("opentype");
+}
+
+@font-face {
+  font-family: 'Galanda Moderna Light';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Galanda-Moderna-Light.ttf") format("truetype"), url("../fonts/Galanda-Moderna-Light.woff2") format("woff2"), url("../fonts/Galanda-Moderna-Light.otf") format("opentype"), url("../fonts/Galanda-Moderna-Light.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Jambetica';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Jambetica-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Jambetica';
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Jambetica-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Jambetica';
+  font-style: normal;
+  font-weight: lighter;
+  src: url("../fonts/Jambetica-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Jambetica';
+  font-style: italic;
+  font-weight: lighter;
+  src: url("../fonts/Jambetica-Light-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Jambetica';
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Jambetica-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Jambetica';
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Jambetica-Bold-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Righteous';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Righteous-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/BalooBhai2-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/BalooBhai2-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../fonts/BalooBhai2-SemiBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../fonts/BalooBhai2-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: 'Baloo Bhai 2';
+  font-style: normal;
+  font-weight: 800;
+  src: url("../fonts/BalooBhai2-ExtraBold.ttf") format("truetype");
+}
+
+/* Social Colors */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Jambetica", Verdana, "Courier New", Courier, monospace;
+  background-image: url("../img/back_s1.jpg");
+  background-position: left;
+  background-repeat: no-repeat;
+  background-origin: padding-box;
+  background-attachment: fixed;
+  background-size: cover;
+  max-width: 768px;
+}
+
+.container-global {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.buttons {
+  padding-top: 15px;
+  text-align: center;
+}
+
+.buttons a {
+  display: inline-block;
+  text-transform: capitalize;
+  text-align: center;
+  margin: 5px;
+  border: 1px solid black;
+  text-decoration: none;
+  padding: 6px 12px;
+  color: black;
+}
+
+.buttons a:visited {
+  color: black;
+}
+
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url("../img/back_l1.jpg");
+    max-width: 1920px;
+  }
+}
+
+.header-bar {
+  max-width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  background-color: #6B6F78;
+  padding: 10px;
+}
+
+.brand {
+  width: 65%;
+  max-width: 65%;
+  font-family: "Galanda Moderna Light";
+  font-size: 25px;
+  font-weight: bolder;
+  color: #E2E3E5;
+  text-decoration: none;
+}
+
+.brand:visited {
+  color: #E2E3E5;
+}
+
+.menu-container {
+  max-width: 30%;
+  width: 30%;
+  text-align: right;
+}
+
+#check-menu {
+  display: none;
+}
+
+.header-bar label {
+  display: block;
+  padding: 5px;
+}
+
+.header-bar label:hover {
+  cursor: pointer;
+  background-color: #919199;
+}
+
+.header-bar label img {
+  width: 48px;
+}
+
+.header-bar label .fa-bars {
+  font-size: 48px;
+  color: #E2E3E5;
+}
+
+.menu {
+  position: absolute;
+  width: 30%;
+  margin-top: 10px;
+  text-align: right;
+  visibility: hidden;
+  z-index: 50;
+}
+
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  background-color: #6B6F7894;
+}
+
+.menu ul li:hover {
+  background-color: #91919994;
+}
+
+.menu ul a {
+  display: block;
+  padding: 5px 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: #E2E3E5;
+}
+
+#check-menu:checked ~ .menu {
+  visibility: visible;
+}
+
+@media only screen and (min-width: 768px) {
+  .header-bar label {
+    display: none;
+  }
+  .brand {
+    width: 50%;
+    max-width: 50%;
+  }
+  .menu-container {
+    max-width: 50%;
+    width: 50%;
+  }
+  .menu {
+    width: 100%;
+    visibility: visible;
+    position: relative;
+  }
+  .menu ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .menu li {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+  .menu ul li a {
+    padding-bottom: 15px;
+  }
+}
+
+.mainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+}
+
+.main-logo {
+  max-width: 100%;
+  width: 100px;
+  height: auto;
+}
+
+.text-container {
+  text-align: center;
+}
+
+.line {
+  border-top: black;
+}
+
+hr {
+  border: thin;
+  border-top: 1.1px dashed;
+  width: 100%;
+}
+
+.text-container h1 {
+  font-family: "Galanda Moderna Light";
+  font-size: 40px;
+  font-weight: 500;
+}
+
+span {
+  font-weight: 600;
+}
+
+.buttons a:hover {
+  background-color: black;
+  color: #E2E3E5;
+}
+
+@media only screen and (min-width: 768px) {
+  .main-logo {
+    margin-top: 40px;
+  }
+  .main-logo {
+    width: 200px;
+  }
+  h1 {
+    font-size: 55px;
+  }
+  h2 {
+    font-size: 50px;
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-height: 725px) {
+  .buttons a {
+    background-color: #E2E3E594;
+  }
+}
+
+@media only screen and (max-width: 768px) and (max-height: 640px) {
+  .buttons a {
+    background-color: #E2E3E594;
+  }
+}
+
+.content {
+  font-size: 36px;
+  /*Propiedad altura de linea controla el interlineado del texto dentro
+    de la caja. Importante para luego hacer el overflow */
+  height: 42px;
+  line-height: 42px;
+  /*Esta propiedad oculta los elementos que exceden de la caja*/
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.content .roll-text {
+  margin: 0;
+  padding: 0;
+  padding-right: 42px;
+  list-style: none;
+  /*border: 1px solid black*/
+}
+
+.content li {
+  margin: 0;
+  line-height: 42px;
+  text-transform: capitalize;
+}
+
+.one {
+  animation: roll-slow 10s linear 0.5s infinite normal forwards;
+  /*compatibilidad con los navegadores*/
+  -webkit-animation: roll-slow 10s linear 0.5s infinite normal forwards;
+  -moz-animation: roll-slow 10s linear 0.5s infinite normal forwards;
+  -o-animation: roll-slow 10s linear 0.5s infinite normal forwards;
+}
+
+.two {
+  animation: roll 5s linear 0.5s infinite normal forwards;
+  /*compatibilidad con los navegadores*/
+  -webkit-animation: roll 5s linear 0.5s infinite normal forwards;
+  -moz-animation: roll 5s linear 0.5s infinite normal forwards;
+  -o-animation: roll 5s linear 0.5s infinite normal forwards;
+}
+
+@media only screen and (max-height: 590px) {
+  .content {
+    background-color: #E2E3E525;
+  }
+}
+
+@keyframes roll {
+  /*Truco para realizar una pausa entre medias:
+     realizar un keyframe con la misma posicion.
+     Se trata de una animacion que se queda en el mismo sitio*/
+  0% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -42px;
+  }
+  75% {
+    margin-top: -42px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes roll-slow {
+  /*Truco para realizar una pausa entre medias:
+       realizar un keyframe con la misma posicion.
+       Se trata de una animacion que se queda en el mismo sitio*/
+  0% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: 0;
+  }
+  37.5% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -42px;
+  }
+  75% {
+    margin-top: -42px;
+  }
+  87.5% {
+    margin-top: -42px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+/*Compatibilidad con los naveadores*/
+@-webkit-keyframes roll {
+  /*Truco para realizar una pausa entre medias:
+       realizar un keyframe con la misma posicion.
+       Se trata de una animacion que se queda en el mismo sitio*/
+  0% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -42px;
+  }
+  75% {
+    margin-top: -42px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@-webkit-keyframes roll-slow {
+  /*Truco para realizar una pausa entre medias:
+         realizar un keyframe con la misma posicion.
+         Se trata de una animacion que se queda en el mismo sitio*/
+  0% {
+    margin-top: 0;
+  }
+  25% {
+    margin-top: 0;
+  }
+  37.5% {
+    margin-top: 0;
+  }
+  50% {
+    margin-top: -42px;
+  }
+  75% {
+    margin-top: -42px;
+  }
+  87.5% {
+    margin-top: -42px;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+/** ---- A partir de un tamaño de tablet**/
+@media only screen and (min-width: 768px) {
+  .content {
+    font-size: 50px;
+    height: 60px;
+    line-height: 60px;
+  }
+  .content li {
+    line-height: 60px;
+  }
+  @keyframes roll {
+    0% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: -60px;
+    }
+    75% {
+      margin-top: -60px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  @keyframes roll-slow {
+    0% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: 0;
+    }
+    37.5% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: -60px;
+    }
+    75% {
+      margin-top: -60px;
+    }
+    87.5% {
+      margin-top: -60px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  /*Compatibilidad con los naveadores*/
+  @-webkit-keyframes roll {
+    /*Truco para realizar una pausa entre medias:
+  realizar un keyframe con la misma posicion.
+  Se trata de una animacion que se queda en el mismo sitio*/
+    0% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: -60px;
+    }
+    75% {
+      margin-top: -60px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+  @-webkit-keyframes roll-slow {
+    /*Truco para realizar una pausa entre medias:
+  realizar un keyframe con la misma posicion.
+  Se trata de una animacion que se queda en el mismo sitio*/
+    0% {
+      margin-top: 0;
+    }
+    25% {
+      margin-top: 0;
+    }
+    37.5% {
+      margin-top: 0;
+    }
+    50% {
+      margin-top: -60px;
+    }
+    75% {
+      margin-top: -60px;
+    }
+    87.5% {
+      margin-top: -60px;
+    }
+    100% {
+      margin-top: 0;
+    }
+  }
+}
+
+/*Cierre mediaquery Tablet*/
+.title-container {
+  width: 100%;
+  height: 3vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px 0 60px 0;
+  -webkit-transform: translate(-60px, 0px);
+          transform: translate(-60px, 0px);
+}
+
+.image-container {
+  /*con absolute sacamos el contenedor del flujo y lo colocamos mediante
+      top y left , con porcentaje respecto  a container */
+  position: absolute;
+  /**top: 0%;*/
+  /*left: 50%;*/
+  /*Aqui posicionamos el contenedor de la imagen luego 
+      realizaremos la animacion de la imagen pero siempre
+      en relacion al contenedor*/
+  /*Se traslada de la posicion del container sobre el eje +-Y o +-X */
+  /*con translate saco la imagen del marco aunque su espacio siga ahi*/
+  -webkit-transform: translate(0, -25px);
+  transform: translate(0px, -25px);
+  z-index: 40;
+  /*border: 4px solid blue;*/
+}
+
+.image-container img {
+  /*border: 4px solid brown;*/
+  height: 100px;
+  animation: image-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+  -webkit-animation: image-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+  filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
+  -webkit-filter: drop-shadow(-4px 5px 5px rgba(0, 0, 0, 0.6));
+}
+
+.texto-container {
+  /*border: 4px solid brown;*/
+  -webkit-transform: translate(-20px, 0);
+          transform: translate(-20px, 0);
+  z-index: 5;
+}
+
+.texto-container h1 {
+  font-family: "Baloo Bhai 2";
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.texto-container .fading-effect {
+  /*Lo que hace es pintar esta capa con el mismo color o 
+  imagen que el fondo de la web ocultando el texto del titulo.
+  La animacion va reduciendo el ancho hasta cero y asi aparece 
+  poco a poco el texto. Para evitar el flujo y el espacio fijo
+  la position en absolute. TRUCO: poniento top 0 y botton 0 se fija
+  la altura de la capa a la del elemento padre, text-container
+  para llenar el ancho ponemos el width al 100%
+  La posicion right hace que la direccion del fade se 
+  realice a la izquierda o a la derecha*/
+  /*border: 4px solid yellowgreen;*/
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background: #e7e8ec;
+  animation: text-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+  -webkit-animation: text-slide 4s cubic-bezier(0.5, 0.5, 0, 1);
+  animation-fill-mode: forwards;
+  -webkit-animation-fill-mode: forwards;
+}
+
+/* ANIMACIONES  */
+@-webkit-keyframes image-slide {
+  0% {
+    -webkit-transform: translatex(-80px) scale(0);
+            transform: translatex(-80px) scale(0);
+  }
+  60% {
+    -webkit-transform: translatex(-80px) scale(1);
+            transform: translatex(-80px) scale(1);
+  }
+  90% {
+    -webkit-transform: translatex(120px) scale(1);
+            transform: translatex(120px) scale(1);
+  }
+  100% {
+    -webkit-transform: translatex(120px) scale(1);
+            transform: translatex(120px) scale(1);
+  }
+}
+@keyframes image-slide {
+  0% {
+    -webkit-transform: translatex(-80px) scale(0);
+            transform: translatex(-80px) scale(0);
+  }
+  60% {
+    -webkit-transform: translatex(-80px) scale(1);
+            transform: translatex(-80px) scale(1);
+  }
+  90% {
+    -webkit-transform: translatex(120px) scale(1);
+            transform: translatex(120px) scale(1);
+  }
+  100% {
+    -webkit-transform: translatex(120px) scale(1);
+            transform: translatex(120px) scale(1);
+  }
+}
+
+@-webkit-keyframes text-slide {
+  0% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  77% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@keyframes text-slide {
+  0% {
+    width: 100%;
+  }
+  60% {
+    width: 100%;
+  }
+  77% {
+    width: 0;
+  }
+  100% {
+    width: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .title-container {
+    height: 6vh;
+  }
+  .image-container img {
+    height: 130px;
+  }
+  .texto-container {
+    -webkit-transform: translate(-60px, 0);
+            transform: translate(-60px, 0);
+  }
+  .texto-container h1 {
+    font-size: 40px;
+  }
+}
+
+/*cierre media tablet*/
+.portfolio-container {
+  margin: 0px 20px;
+}
+
+.work-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: transparent;
+}
+
+.work-container .work-thumb {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #ffffff;
+  /*Propiedad de profundidad cuanto mayor sea el valor estara en la 
+    capa mas encima ej: capa 2' encima de la capa 1 aunque lo recomendable
+    es numerarlos de 10 en 10 por si necesitamos capas intermedias*/
+  z-index: 20;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.work-container .work-thumb img {
+  width: 100%;
+  height: 100%;
+  /*Opcional filtros, en mi caso los quiero poner en escala de grises*/
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.work-container .work-thumb img:hover {
+  -webkit-filter: grayscale(0%);
+          filter: grayscale(0%);
+  -webkit-transition: all 1s ease-in-out 0.3s;
+  transition: all 1s ease-in-out 0.3s;
+}
+
+.work-container .work-content {
+  width: 100%;
+  min-height: 250px;
+  padding: 20px;
+  padding-left: 20px;
+  padding-top: 160px;
+  margin-left: 0px;
+  /*El valor negativo hace que el elemento "invada" el que tenga
+    "al lado en este caso a la parte superior"*/
+  margin-top: -140px;
+  text-align: justify;
+  background-color: #ffffff;
+  z-index: 10;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.work-container .work-content h2 {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-size: 30px;
+}
+
+.etiqueta {
+  background-color: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 10;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+}
+
+.fintech {
+  background-color: #68c709;
+}
+
+.fintech::after {
+  content: "fintech";
+}
+
+.web {
+  background-color: #c70922;
+}
+
+.web::after {
+  content: "web";
+}
+
+.hobbies {
+  background-color: #df6400;
+}
+
+.hobbies::after {
+  content: "personal";
+}
+
+.work-container p {
+  margin: 10px 0;
+}
+
+.work-btn {
+  float: right;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#919199), to(#333333));
+  background-image: linear-gradient(90deg, #919199, #333333);
+  border-radius: 10px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+@media (min-width: 767px) {
+  .work-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .work-container .work-content {
+    width: 100%;
+    padding: 20px;
+    margin-top: 0px;
+    /*El valor negativo hace que el elemento "invada" el que tenga
+        "al lado en este caso a la izquierda"*/
+    margin-left: -140px;
+    /*incremento el padding a la izquierda para que no se solape 
+        con el valor negativo del margin y quede 40px de "hueco"*/
+    padding-left: 180px;
+    padding-top: 20px;
+  }
+  .work-container .work-content h2 {
+    font-size: 35px;
+  }
+}
+
+.main-fintech {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  margin: auto;
+}
+
+.media-container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+  -ms-grid-rows: 30% 40% auto;
+      grid-template-rows: 30% 40% auto;
+  grid-gap: 10px;
+}
+
+.video-container {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: 2/1;
+}
+
+.video-container iframe {
+  width: 100%;
+  height: 100%;
+  /*width="560" height="315"*/
+}
+
+.media-container p {
+  margin: 0px;
+  padding: 0px 20px;
+  overflow: auto;
+  font-size: 16px;
+  background-color: #E2E3E594;
+}
+
+.excel-container {
+  position: relative;
+  padding-top: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 10px;
+}
+
+.excel-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+}
+
+@media only screen and (min-width: 768px) {
+  .media-container {
+    -ms-grid-columns: 65% auto;
+        grid-template-columns: 65% auto;
+    -ms-grid-rows: 70% auto;
+        grid-template-rows: 70% auto;
+  }
+  .video-container {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: 1/1;
+  }
+  .gallery-container {
+    -ms-grid-column: 2;
+    grid-column: 2/2;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1/ span 2;
+  }
+}
+
+/*GALERIA CSS*/
+/*vamos a usar que el slide se desplace con animaciones
+lo haremos gracias a 2 selectores
+target: Este selector o pseudo-class es empleado para 
+seleccionar o dar estilo a un único elemento cuyo id coincida 
+en alguno de los elementos HTML; en otras palabras 
+el selector :target es empleado para dar estilo al elemento HTML
+actualmente activado.
+Se conoce como elemento target a aquel que ha sido enlazado 
+(es decir, cuando ya aparece en la URL el símbolo # seguido de su ID).
+Esta pseudo-clase se activa al pulsar un link y no se desactiva 
+hasta pulsar otro, por lo que nos puede servir para crear menús, 
+pestañas y más cosas impresionantes con solo CSS.
+Para seleccionar los elementos uso del selector ~ :
+
+h1 ~ h2 { ... }"selector general de elementos hermanos"
+Su sintaxis es elemento1 ~ elemento2 y selecciona el elemento2 que
+es hermano de elemento1 y se encuentra detrás en el código HTML.
+En el selector adyacente la condición adicional era que los dos 
+elementos debían estar uno detrás de otro en el código HTML, 
+mientras que ahora la única condición es que uno esté detrás de otro.
+
+h1 + h2 { ... } selector adyacente
+El primer selector (h1 + h2) sólo selecciona el primer elemento <h2> 
+de la página, ya que es el único que cumple que es hermano de <h1> 
+y se encuentra justo detrás en el código HTML. 
+
+elemento:nth-child(numero), 
+selecciona el elemento indicado pero con la condición de que sea el 
+hijo enésimo de su padre. Este selector es útil para seleccionar el 
+segundo párrafo de un elemento, el quinto elemento de una lista, etc.
+*/
+.gallery-container {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  /* Or set a fixed height */
+}
+
+/* SLIDER */
+.gallery-container .slider {
+  height: 200px;
+  /*100%*/
+  white-space: nowrap;
+  /*los textos pueden salir del elemento contenedor*/
+  /*font-size: 0;*/
+  /*al disminuir el texto a cero se hace que "desaparezca*/
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  /*desaparecen suavemente*/
+}
+
+/* SLIDES */
+/*con el selector > selecciono todos los hijos directos de slider, 
+los div donde se encuentran los colores de fondo
+"posibilidad de ese div colocar otro container que tenga imagenes o carpetas*/
+.gallery-container .slider > * {
+  font-size: 1rem;
+  display: inline-block;
+  white-space: normal;
+  vertical-align: top;
+  height: 100%;
+  width: 100%;
+  background: none 50% no-repeat;
+  background-size: cover;
+}
+
+/* PREV/NEXT, CONTAINERS & ANCHORS */
+/**El contenedor  prevnext se pone  en posicion absoluta tomando como
+referencia gallery-container para poder ajustar los enlaces botones de
+prev y sig. z-index ponemos este contenedor encima de los demas*/
+.gallery-container .prevNext {
+  position: absolute;
+  z-index: 30;
+  top: 50%;
+  width: 100%;
+  height: 0;
+}
+
+.gallery-container .prevNext > div + div {
+  visibility: hidden;
+  /* Oculta los contenedores menos el primero que no tiene otro div arriba */
+}
+
+/*damos visibilidad a los enlaces "vacios" poniendo en posicion absolute
+y dandoles un alto y un ancho*/
+.gallery-container .prevNext a {
+  background: #333333;
+  color: black;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  /* If you want to place numbers */
+  text-align: center;
+  opacity: 0.5;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  left: 0;
+}
+
+.gallery-container .prevNext a:hover {
+  opacity: 1;
+}
+
+.gallery-container .prevNext a + a {
+  left: auto;
+  right: 0;
+}
+
+/* Navegacion */
+.gallery-container .bullets {
+  position: absolute;
+  z-index: 20;
+  bottom: 0;
+  /*centrar el contenedor verticalmente siendo absoluto*/
+  /*margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;*/
+  /* fin centrar el contenedor verticalmente siendo absoluto*/
+  padding: 10px 0;
+  width: 100%;
+  /*podemos modificar el ancho y luego centrarlo mas arriba*/
+  text-align: center;
+}
+
+.gallery-container .bullets > a {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  background: #4b4848;
+  transition: 0.3s;
+  -webkit-transition: 0.3s;
+}
+
+.gallery-container .bullets > a + a {
+  /* pone a todos como inactivos menos el primero 
+    (situacion inicial al  cargar la pagina*/
+  background: rgba(46, 44, 44, 0.5);
+}
+
+.gallery-container .bullets > a:hover {
+  background: rgba(46, 44, 44, 0.7) !important;
+}
+
+/* Botones de Navegacion */
+/*Todos se encuentran inactivos*/
+.gallery-container s:target ~ .bullets > * {
+  background: rgba(46, 44, 44, 0.5);
+}
+
+/*Poner activo cada boton en funcion del boton*/
+#s1:target ~ .bullets > *:nth-child(1) {
+  background: #4b4848;
+}
+
+#s2:target ~ .bullets > *:nth-child(2) {
+  background: #4b4848;
+}
+
+#s3:target ~ .bullets > *:nth-child(3) {
+  background: #4b4848;
+}
+
+#s4:target ~ .bullets > *:nth-child(4) {
+  background: #4b4848;
+}
+
+/* More slides? Add here more rules */
+/*Botones previo y siguiente
+oculto o muestro estos botones en funcion del elemento con target */
+/*Para todos el estado inicial es oculto*/
+.CSSgal > s:target ~ .prevNext > * {
+  visibility: hidden;
+}
+
+/*Muestro el elemento en funcion del elemento prevnext activo*/
+#s1:target ~ .prevNext > *:nth-child(1) {
+  visibility: visible;
+}
+
+#s2:target ~ .prevNext > *:nth-child(2) {
+  visibility: visible;
+}
+
+#s3:target ~ .prevNext > *:nth-child(3) {
+  visibility: visible;
+}
+
+#s4:target ~ .prevNext > *:nth-child(4) {
+  visibility: visible;
+}
+
+/* More slides? Add here more rules */
+/*Efecto Slide aqui trasladamos la posicion*/
+#s1:target ~ .slider {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+#s2:target ~ .slider {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+#s3:target ~ .slider {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+
+#s4:target ~ .slider {
+  transform: translateX(-300%);
+  -webkit-transform: translateX(-300%);
+}
+
+/*Decoracion de Elementos*/
+.gallery-container .bullets a, .gallery-container .prevNext a {
+  border-radius: 50%;
+  margin: 0 3px;
+  color: rgba(0, 0, 0, 0.8);
+  text-decoration: none;
+}
+
+.img-slide-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.enlace-shutter {
+  position: relative;
+  margin: 0px;
+}
+
+.img-slide-container img {
+  width: 100%;
+  height: 120%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top left;
+     object-position: top left;
+}
+
+.img-slide-container img::before {
+  content: attr(description);
+  z-index: 1;
+  position: absolute;
+  top: 20%;
+  width: 100%;
+  height: 50%;
+}
+
+.img-slide-container .descripcion {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 15;
+  padding: 0 10%;
+  margin: 0;
+  color: #E2E3E5;
+  font-weight: 500;
+  background: rgba(19, 155, 1, 0.8);
+  opacity: 0;
+  -webkit-transition: opacity .6s;
+  transition: opacity .6s;
+  -webkit-transform: translateY(-18%);
+          transform: translateY(-18%);
+  font-size: 0.9rem;
+}
+
+.img-slide-container .descripcion:hover {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 767px) {
+  .img-slide-container .descripcion {
+    top: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .img-slide-container .descripcion {
+    top: 100%;
+    -webkit-transform: translateY(-30%);
+            transform: translateY(-30%);
+  }
+}
+
+/*Hago un grid de 12 columnmas para hacer un diseño responsive pero 
+sin necesidad de usar bootstrap*/
+.main-about {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  -ms-grid-rows: (1fr)[12];
+      grid-template-rows: repeat(12, 1fr);
+  max-height: 92vh;
+  position: relative;
+  overflow: hidden;
+  display: -ms-grid;
+  -ms-grid-columns: 1fr 12;
+  -ms-grid-rows: 1fr 12;
+}
+
+.retrato {
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 5;
+  grid-column: 6 / span 5;
+  grid-row: 1 / -1;
+  background: url(../img/acerca1w.jpg) no-repeat 50% 50%/cover;
+  -ms-grid-column: 6;
+  -ms-grid-column-span: 5;
+}
+
+.titulo {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 6;
+  grid-column: 4 / 10;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 2;
+  grid-row: 8 / 10;
+  font-family: "Galanda Moderna Light";
+  font-size: 6rem;
+  color: #E2E3E5;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 6;
+  -ms-grid-row: 8;
+  -ms-grid-row-span: 2;
+  color: #d9d9d9;
+  text-shadow: -1px -1px 1px rgba(255, 255, 255, 0.1), 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.acerca-content {
+  -ms-grid-column: 3;
+  -ms-grid-column-span: 3;
+  grid-column: 3 / 6;
+  -ms-grid-row: 4;
+  -ms-grid-row-span: 2;
+  grid-row: 4 / 6;
+  margin-top: 2rem;
+  font-weight: 400;
+  text-align: right;
+  margin-right: 1rem;
+}
+
+.acerca-content p {
+  margin-top: 0.6rem;
+}
+
+.small1 {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 3;
+  grid-row: 10 / 13;
+  background: url(../img/acerca4w.jpg) no-repeat 50% 50%/cover;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 3;
+}
+
+.small2 {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  grid-column: 4 / 6;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  grid-row: 1 / 4;
+  background: url(../img/acerca2w.jpg) no-repeat 50% 50%/cover;
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 2;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+}
+
+.small3 {
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  grid-column: 11 / 13;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 3;
+  grid-row: 10 / 13;
+  background: url(../img/acerca3w.jpg) no-repeat 50% 50%/cover;
+  -ms-grid-column: 11;
+  -ms-grid-column-span: 2;
+  -ms-grid-row: 10;
+  -ms-grid-row-span: 3;
+}
+
+.readmore {
+  -ms-grid-column: 12;
+  -ms-grid-column-span: 1;
+  grid-column: 12 / 13;
+  grid-row: -9 / -6;
+  -ms-grid-column: 12;
+  -ms-grid-column-span: 1;
+}
+
+.readmore img {
+  height: 8.75rem;
+  width: auto;
+}
+
+.social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 1.875rem;
+  position: absolute;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  justify-self: space-around;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 1;
+  grid-column: 1 / 2;
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 6;
+  grid-row: 3 / 9;
+}
+
+.social a img {
+  display: block;
+  margin-top: 2rem;
+}
+
+@media (max-width: 768px) {
+  .main-about {
+    max-height: 89vh;
+  }
+  .titulo {
+    font-size: 5rem;
+  }
+  .acerca-content p {
+    font-size: 0.7rem;
+  }
+  .social a img {
+    height: 80px;
+    width: auto;
+  }
+  .social a img:last-child {
+    height: 80px;
+    width: auto;
+  }
+  .small1,
+  .small3 {
+    -ms-grid-row: 11;
+    -ms-grid-row-span: 2;
+    grid-row: 11 / 13;
+  }
+  .small2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    grid-row: 1 / 3;
+  }
+  .titulo {
+    -ms-grid-column: 4;
+    -ms-grid-column-span: 8;
+    grid-column: 4 / 12;
+  }
+}
+
+.contact-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 68vh;
+  padding: 0 2vh;
+  margin: 3vh 0;
+}
+
+.topcontact-container {
+  position: relative;
+  background-image: url(../img/cafe.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.socials-container {
+  display: block;
+  float: right;
+  width: auto;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 10px;
+  /* clase intermedia para dividir los iconos */
+}
+
+.social-buttons .social-margin {
+  margin-right: 15px;
+}
+
+.social-buttons a,
+.social-buttons a:hover,
+.social-buttons a:focus,
+.social-buttons a:active {
+  text-decoration: none;
+}
+
+.social-buttons .social-icon {
+  display: inline-block;
+}
+
+.social-buttons .social-icon {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  border: 5px solid;
+  border-radius: 138px;
+  text-align: center;
+  line-height: 1px;
+  padding-top: 4px;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.social-buttons .social-icon:hover {
+  -webkit-transform: rotate(360deg) scale(1.3);
+          transform: rotate(360deg) scale(1.3);
+}
+
+.social-buttons .social-icon.facebook {
+  font-size: 18px;
+  padding-top: 4px;
+  border-color: #3b5998;
+  background-color: #3b5998;
+  color: #ffffff;
+}
+
+.social-buttons .social-icon.facebook:hover {
+  background-color: #ffffff;
+  color: #3b5998;
+}
+
+.social-buttons .social-icon.linkedin {
+  font-size: 18px;
+  padding-top: 4px;
+  padding-left: 1px;
+  background-color: #0976b4;
+  color: #ffffff;
+  border-color: #0976b4;
+}
+
+.social-buttons .social-icon.linkedin:hover {
+  background-color: #ffffff;
+  color: #0976b4;
+}
+
+.social-buttons .social-icon.instagram {
+  font-size: 18px;
+  padding-top: 4px;
+  padding-left: 1px;
+  background-color: #E1306C;
+  color: #ffffff;
+  border-color: #E1306C;
+}
+
+.social-buttons .social-icon.instagram:hover {
+  background-color: #ffffff;
+  color: #E1306C;
+}
+
+.social-buttons .social-icon.youtube {
+  font-size: 18px;
+  padding-top: 4px;
+  padding-left: 0px;
+  background-color: #bb0000;
+  color: #ffffff;
+  border-color: #bb0000;
+}
+
+.social-buttons .social-icon.youtube:hover {
+  background-color: #ffffff;
+  color: #bb0000;
+}
+
+.avatar {
+  position: absolute;
+  top: -55%;
+  left: 40%;
+  z-index: 99;
+  width: 100px;
+  height: 100px;
+  background: url(../img/FotoReciente.png) no-repeat center/cover;
+  border-radius: 50%;
+  background-color: #919199;
+  -webkit-box-shadow: 1px 1px 5px 5px #33333394;
+          box-shadow: 1px 1px 5px 5px #33333394;
+}
+
+.form-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: #33333394 2px solid;
+  min-height: 60vh;
+}
+
+.formulario {
+  width: 100%;
+  min-height: 30vh;
+  padding: 0 10px;
+}
+
+.input-container {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.input-container .etiq {
+  font-family: "Righteous";
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 15px 0 2px 24px;
+}
+
+.input-container input, textarea {
+  display: block;
+  width: 100%;
+  background: #E2E3E594;
+  font-family: "Jambetica", Verdana;
+  font-size: 18px;
+  color: #333333;
+  line-height: 1.2;
+  padding: 0 26px;
+  height: 48px;
+  border-style: none;
+}
+
+.input-container input:focus, textarea:focus {
+  background: #F0F0F2;
+  outline: 0;
+}
+
+.form-container button {
+  width: 80%;
+  height: 45px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #F0F0F2;
+  background-color: #919199;
+  border-color: #919199;
+  border-style: solid;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/*Media Querys*/
+@media only screen and (min-width: 768px) {
+  .contact-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+    max-height: 75vh;
+  }
+  .topcontact-container {
+    width: 50%;
+    display: block;
+  }
+  .form-container {
+    width: 50%;
+  }
+  .formulario {
+    min-height: 60%;
+  }
+  .avatar {
+    top: -13%;
+    left: 90%;
+  }
+  .socials-container {
+    width: 90%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, 20%);
+            transform: translate(-50%, 20%);
+  }
+  .social-buttons .social-icon {
+    width: 50px;
+    height: 50px;
+    padding-top: 11px;
+  }
+  .social-buttons .social-icon.facebook {
+    font-size: 22px;
+    padding-top: 9px;
+  }
+  .social-buttons .social-icon.linkedin {
+    font-size: 24px;
+    padding-top: 8px;
+    padding-left: 1px;
+  }
+  .social-buttons .social-icon.instagram {
+    font-size: 24px;
+    padding-top: 8px;
+  }
+  .social-buttons .social-icon.youtube {
+    font-size: 24px;
+    padding-top: 8px;
+  }
+}
+
+.maca-main {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/*Decoracion de elementos*/
+.maca-main h1 {
+  font-family: "Baloo Bhai 2";
+  font-size: 30px;
+  margin: 0;
+}
+
+.maca-main h2, h3 {
+  font-family: "Baloo Bhai 2", Arial, Helvetica, sans-serif;
+  font-weight: 500;
+  margin: 0;
+  padding: 0;
+}
+
+.maca-main h2 {
+  color: #621708;
+  font-size: 1.5em;
+}
+
+.maca-main h3 {
+  margin: 0.5rem 0;
+  font-size: 1.17em;
+}
+
+.grid-maca img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.grid-maca p span {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-fase {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.titulo-fase a {
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: #6B6F78;
+  color: #E2E3E5;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+@media screen and (max-width: 599px) {
+  .grid-maca article img {
+    max-height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .grid-maca article img[alt~="vertical"] {
+    max-height: 550px;
+  }
+}
+
+/*Layouts Responsive*/
+@media screen and (min-width: 600px) {
+  .grid-maca {
+    display: -ms-grid;
+    display: grid;
+    /*Los ítems que no están explícitamente colocados en el contenedor grid, 
+        se disponen automáticamente en filas (rows). 
+        Para reordenar los ítems del contenedor grid utilizamos
+        la propiedad grid-auto-flow.*/
+    grid-auto-flow: column;
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  .grid-maca {
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .grid-maca {
+    -ms-grid-columns: 1fr 2fr 1fr 2fr;
+        grid-template-columns: 1fr 2fr 1fr 2fr;
+  }
+}
+
+article {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+  background-color: #E2E3E594;
+  border-radius: 10px;
+}
+
+article p {
+  font-size: 0.95rem;
+}
+
+/* Dado que estamos estaticos en el layout,
+el articulo con imagen debe ser multiplo de 4, tres articulos de texto
+y el 4 u octavo con imagen*/
+/*Ire definiendo las areas que ocupa en funcion de la resolucion de la
+pantalla. */
+article:nth-child(4) {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-area: 1/2/4/3;
+}
+
+@media screen and (min-width: 600px) {
+  article:nth-child(4n) {
+    border-bottom: 0;
+    padding-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+  article:nth-child(4) {
+    padding-right: 1rem;
+  }
+  article:nth-child(8) {
+    -ms-grid-row: 4;
+    -ms-grid-row-span: 4;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 4/2/8/3;
+    padding-right: 1rem;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  article:nth-child(8) {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 3;
+    grid-area: 1/4/4/-1;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  article:nth-child(4n+3) {
+    border-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  article:nth-child(4) {
+    padding-right: 1rem;
+  }
+  article:nth-child(8) {
+    padding-right: 1rem;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

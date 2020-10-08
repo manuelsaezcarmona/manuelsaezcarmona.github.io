@@ -1,0 +1,259 @@
+.contact-container{
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   max-height: 68vh;
+   padding: 0 2vh;
+   margin: 3vh 0;
+
+}
+.topcontact-container{
+    position: relative;
+    //border: seagreen 2px solid;
+    background-image: url(../img/cafe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.socials-container{
+    display: block;
+    float: right;
+    width: auto;
+    //height: 20%;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 10px;
+    /* clase intermedia para dividir los iconos */
+}
+
+.social-buttons .social-margin {
+  margin-right: 15px;
+}
+.social-buttons a,
+.social-buttons a:hover,
+.social-buttons a:focus,
+.social-buttons a:active {
+  text-decoration: none;
+}
+
+.social-buttons .social-icon {
+  display: inline-block;
+}
+
+.social-buttons .social-icon {
+  box-sizing: border-box;
+  width: 35px;
+  height: 35px;
+  border: 5px solid;
+  border-radius: 138px;
+  text-align: center;
+  //margin-bottom: 15px;
+  line-height: 1px;
+  padding-top: 4px;
+  transition: all 0.5s;
+}
+.social-buttons .social-icon:hover {
+  transform: rotate(360deg) scale(1.3);
+}
+
+.social-buttons .social-icon.facebook {
+  font-size: 18px;
+  padding-top: 4px;
+  border-color: #3b5998;
+  background-color: #3b5998;
+  color: #ffffff;
+}
+.social-buttons .social-icon.facebook:hover {
+  background-color: #ffffff;
+  color: #3b5998;
+}
+
+.social-buttons .social-icon.linkedin {
+  font-size: 18px;
+  padding-top: 4px;
+  padding-left: 1px;
+  background-color: #0976b4;
+  color: #ffffff;
+  border-color: #0976b4;
+}
+.social-buttons .social-icon.linkedin:hover {
+  background-color: #ffffff;
+  color: #0976b4;
+}
+
+.social-buttons .social-icon.instagram {
+  font-size: 18px;
+  padding-top: 4px;
+  padding-left: 1px;
+  background-color: #E1306C;
+  color: #ffffff;
+  border-color: #E1306C;
+}
+.social-buttons .social-icon.instagram:hover {
+  background-color: #ffffff;
+  color: #E1306C;
+}
+
+.social-buttons .social-icon.youtube {
+  font-size: 18px;
+  padding-top: 4px;
+  padding-left: 0px;
+  background-color: #bb0000;
+  color: #ffffff;
+  border-color: #bb0000;
+}
+.social-buttons .social-icon.youtube:hover {
+  background-color: #ffffff;
+  color: #bb0000;
+}
+
+.avatar{
+    position: absolute;
+    top: -55%;
+    left: 40%;
+    z-index: 99;
+    width: 100px;
+    height: 100px;
+    //border: royalblue solid 10px;
+    //background-image: url("/img/hamburguesa.jpg") no-repeat 50% 50% / cover;
+    //OJO background-image no me ha servido pero background si!!
+    background: url(../img/FotoReciente.png) no-repeat center/ cover;
+    border-radius: 50%;
+    background-color: $gray-medium;
+    box-shadow: 1px 1px 5px 5px $gray-navbar-trans;
+}
+
+// --------- Formulario de datos
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border:$gray-navbar-trans 2px solid;
+  //border:red 2px solid;
+  min-height: 60vh;
+  //padding: 55px 55px 55px 55px;
+}
+
+
+.formulario{
+  width: 100%;
+  min-height: 30vh;
+  padding: 0 10px;
+  //border: 2px solid ;
+ 
+}
+.input-container{
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.input-container .etiq{
+  font-family: $title-section;
+  font-size: 11px;
+  text-transform: uppercase;
+  line-height: 1.2;
+  padding: 15px 0 2px 24px;
+}
+.input-container input, textarea{
+  display: block;
+  width: 100%;
+  background: $gray-light-trans;
+  font-family: $parrafo;
+  font-size: 18px;
+  color: $gray-navbar;
+  line-height: 1.2;
+  padding: 0 26px;
+  height: 48px;
+  border-style: none;
+}
+
+.input-container input:focus, textarea:focus{
+  background: $gray-ultralight;
+  outline:0;
+	//border: 1px solid $gray-dark;
+}
+
+.form-container button{
+  width: 80%;   
+	height: 45px; 
+	padding-left: 5px;
+	padding-right: 5px; 	
+	margin-bottom: 20px; 
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: $gray-ultralight;
+	background-color: $gray-medium; 
+	border-color: $gray-medium; 
+	border-style: solid; 
+	border-radius: 10px;	
+	
+  cursor: pointer;
+}
+
+/*Media Querys*/
+
+@media only screen and (min-width: 768px){
+    .contact-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        max-height: 75vh;
+    }
+    .topcontact-container{
+      width: 50%;
+      display: block;
+    }
+
+    .form-container{
+      width: 50%;
+     
+      //copiado del formulario visto formateamos el container form
+    }
+    .formulario{
+      min-height: 60%;
+    }
+    .avatar{
+      top: -13%;
+      left: 90%;
+    }
+     .socials-container{
+      width: 90%;
+      //Truco para centrar un div con posicion absoluta
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%,20%);
+    }
+
+     .social-buttons .social-icon {
+      width: 50px;
+      height: 50px;
+      padding-top: 11px;
+    }
+    .social-buttons .social-icon.facebook {
+      font-size: 22px;
+      padding-top: 9px;
+    }
+    .social-buttons .social-icon.linkedin {
+      font-size: 24px;
+      padding-top: 8px;
+      padding-left: 1px;
+    }
+    .social-buttons .social-icon.instagram {
+      font-size: 24px;
+      padding-top: 8px;
+    }
+    .social-buttons .social-icon.youtube {
+      font-size: 24px;
+      padding-top: 8px;
+    }
+
+ 
+} // Cierre media query
+
+
+

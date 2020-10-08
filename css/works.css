@@ -1,0 +1,140 @@
+.work-container {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.work-container .work-thumb {
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #ffffff;
+  /*Propiedad de profundidad cuanto mayor sea el valor estara en la 
+    capa mas encima ej: capa 2' encima de la capa 1 aunque lo recomendable
+    es numerarlos de 10 en 10 por si necesitamos capas intermedias*/
+  z-index: 20;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+}
+
+.work-container .work-thumb img {
+  width: 100%;
+  height: 100%;
+  /*Opcional filtros, en mi caso los quiero poner en escala de grises*/
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.work-container .work-thumb img:hover {
+  -webkit-filter: grayscale(0%) saturate(1.5);
+          filter: grayscale(0%) saturate(1.5);
+  -webkit-transition: all 1s ease-in-out 0.3s;
+  transition: all 1s ease-in-out 0.3s;
+}
+
+.work-container .work-content {
+  width: 100%;
+  min-height: 250px;
+  padding: 20px;
+  padding-left: 20px;
+  padding-top: 160px;
+  margin-left: 0px;
+  /*El valor negativo hace que el elemento "invada" el que tenga
+    "al lado en este caso a la parte superior"*/
+  margin-top: -140px;
+  text-align: justify;
+  background-color: #ffffff;
+  z-index: 10;
+  border-radius: 20px;
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  cursor: default;
+}
+
+.etiqueta {
+  background-color: #cccccc;
+  border-radius: 50px;
+  font-size: 12px;
+  margin: 10;
+  color: #fff;
+  padding: 2px 10px;
+  text-transform: uppercase;
+}
+
+.fintech {
+  background-color: #68c709;
+}
+
+.fintech::after {
+  content: "fintech";
+}
+
+.web {
+  background-color: #c70922;
+}
+
+.web::after {
+  content: "web";
+}
+
+.hobbies {
+  background-color: #df6400;
+}
+
+.hobbies::after {
+  content: "personal";
+}
+
+.work-container h2 {
+  text-align: center;
+}
+
+.work-container p {
+  margin: 10px 0;
+}
+
+.work-btn {
+  float: right;
+  text-decoration: none;
+  background-image: -webkit-gradient(linear, left top, right top, from(#6fc6a9), to(#058ba9));
+  background-image: linear-gradient(90deg, #6fc6a9, #058ba9);
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+@media (min-width: 767px) {
+  .work-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .work-container .work-content {
+    width: 100%;
+    padding: 20px;
+    margin-top: 0px;
+    /*El valor negativo hace que el elemento "invada" el que tenga
+        "al lado en este caso a la izquierda"*/
+    margin-left: -140px;
+    /*incremento el padding a la izquierda para que no se solape 
+        con el valor negativo del margin y quede 40px de "hueco"*/
+    padding-left: 180px;
+    padding-top: 20px;
+  }
+}
+/*# sourceMappingURL=works.css.map */

@@ -1,0 +1,42 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../img/iconMwhite.ico">
+    <link rel="stylesheet" href="../css/all_min.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>Contacto</title>
+    <script type="text/javascript"src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("user_MP71fhgVxTwLhckId7vDv");
+        })();
+    </script>
+</head>
+<body>
+    <div class="container-global">
+        <header>
+            <div class="header-bar" include-html="../partials/header.html"></div>
+        </header>  
+        <div class="title-container"> 
+  
+            <div class="image-container">
+                <img src="../img/contact--v2.png" alt="Imagen portfolio">
+            </div>
+            
+            <div class="texto-container">
+              <h1>contacto</h1>
+              <div class="fading-effect"></div>
+            </div>
+        </div> <!--Cierre title-container-->
+
+        <div class="contact-container"  include-html="../partials/contact-main.html">
+        </div><!--Cierre contact-container-->
+        
+    </div> <!--Cierre container global-->
+    <script src="../js/include-html.js"></script>
+    <script type="text/javascript">
+        emailjs.sendForm('gmail_ID_MASACA', 'template_contact_MASA', 'form-contacto');
+    </script>
+</body>
+</html>

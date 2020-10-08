@@ -1,0 +1,66 @@
+
+<div class="topcontact-container">
+    
+    <div class="avatar"></div>
+    <div class="socials-container">
+        <div class="social-buttons">
+            <!-- facebook  Button -->
+            <a href="https://www.facebook.com/manuel.s.carmona/" target="_blank" class="social-margin"> 
+                <div class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+            </a>
+            <!-- Linkedin Button -->
+            <a href="https://www.linkedin.com/in/manuel-saez-carmona-14563836" target="_blank" class="social-margin"> 
+                <div class="social-icon linkedin">
+                    <i class="fab fa-linkedin-in"></i>
+                </div>
+            </a>
+              <!-- Instagram Button -->
+              <a href="https://www.instagram.com/manu_saez_/?hl=es" target="_blank" class="social-margin"> 
+                <div class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </div>
+            </a>
+             <!-- youtube Button -->
+             <a href="https://www.youtube.com/channel/UC_1LDFbInjTwYr7nVNua18w/" target="_blank" class="social-margin"> 
+                <div class="social-icon youtube">
+                    <i class="fab fa-youtube"></i>
+                </div>
+            </a>
+        </div><!--cierre socials-buttons -->
+    </div><!-- cierre socials-container -->
+</div><!-- cierre topcontact-container -->
+
+<div class="form-container">
+    <p>Cuentame. ¿En qué te puedo ayudar?</p>
+    <form class="formulario" id="form-contacto">
+        <div class="input-container">
+            <label class="etiq" for="from_name">Nombre<span> *</span></label>
+            <input id="nombre" class="entry" type="text" name="from_name" 
+            required="obligatorio" placeholder="Escribe a quien dirigirme" autofocus maxlength="30">
+            <span class="foco-input"></span>
+        </div>
+        <div class="input-container">
+            <label for="from_email" class="etiq">Email<span> *</span></label>
+            <input type="email" name="from_email" id="email"
+            required="obligatorio" placeholder="Indica tu correo electronico">
+            <span class="foco-input"></span>
+        </div>
+        <div class="input-container">
+            <label for="subject" class="etiq">Asunto<span class="obligatorio"> *</span></label>
+            <input type="text" name="subject" id="assunto" 
+            required="obligatorio" placeholder="Motivo de tu mensaje" maxlength="15">
+            <span class="foco-input"></span>
+        </div>
+        <div class="input-container">
+            <label for="message" class="etiq">Mensaje<span class="obligatorio"> *</span>        </label>                     
+            <textarea name="message" class="texto_mensaje" id="mensaje" 
+            required="obligatorio" placeholder="Detalla tu propuesta, proyecto o inquietud"></textarea> 
+            <span class="foco-input"></span>
+        </div>
+    </form>
+    <button type="submit" value="Send" name="enviar_formulario" id="enviar" form="form-contacto"><p>Enviar</p></button>
+</div><!--cierre form-container -->
+
+

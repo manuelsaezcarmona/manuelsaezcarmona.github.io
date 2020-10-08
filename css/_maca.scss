@@ -1,0 +1,147 @@
+
+
+.maca-main{
+    padding: 2rem;
+    max-width: 1400px;
+    margin: auto;
+}
+
+/*Decoracion de elementos*/
+.maca-main h1{
+    font-family: $title-page;
+    font-size: 30px;
+    margin: 0;
+}
+
+.maca-main h2,h3{
+    font-family:  $title-page, Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    margin: 0;
+    padding: 0;
+    
+}
+.maca-main h2{
+    color:$primarycolor-medium;
+    font-size: 1.5em;
+}
+.maca-main h3{
+    margin: 0.5rem 0;
+    font-size: 1.17em;
+}
+
+.grid-maca img {
+    width: 100%;
+    border-radius: 5px;
+}
+.grid-maca p span{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.titulo-fase{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.titulo-fase a{
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color:$gray-darker;
+  color:$gray-light;
+  padding: 5px;
+  border-radius: 5px;
+}
+@media screen and (max-width: 599px) {
+    .grid-maca article img {
+      max-height: 250px;
+      object-fit: cover;
+    }
+    .grid-maca article img[alt~="vertical"] {
+      max-height: 550px;
+    }
+    
+  }
+
+/*Layouts Responsive*/
+@media screen and (min-width: 600px) {
+    .grid-maca{
+        display: grid;
+        /*Los ítems que no están explícitamente colocados en el contenedor grid, 
+        se disponen automáticamente en filas (rows). 
+        Para reordenar los ítems del contenedor grid utilizamos
+        la propiedad grid-auto-flow.*/
+        grid-auto-flow: column;
+        grid-gap: 1rem;
+    }
+}
+@media screen and (min-width: 600px) and (max-width: 1024px) {
+    .grid-maca {
+      grid-template-columns: 1fr 2fr;
+    }
+}
+@media screen and (min-width: 1025px) {
+    .grid-maca {
+      grid-template-columns: 1fr 2fr 1fr 2fr;
+    }
+  }
+ 
+
+article {
+    padding-left: 1rem;
+    padding-right:1rem ;
+    padding-bottom: 1rem;
+    //border-bottom: 1px solid #4d4d4d;
+    background-color: $gray-light-trans;
+    border-radius: 10px;
+    
+}
+article p {
+    font-size: 0.95rem;
+    
+}
+/* Dado que estamos estaticos en el layout,
+el articulo con imagen debe ser multiplo de 4, tres articulos de texto
+y el 4 u octavo con imagen*/
+/*Ire definiendo las areas que ocupa en funcion de la resolucion de la
+pantalla. */
+
+article:nth-child(4) {
+    grid-area: 1/2/4/3;
+}
+
+  @media screen and (min-width: 600px) {
+    article:nth-child(4n) {
+      //border-left: 1px solid #4d4d4d;
+      border-bottom: 0;
+      padding-left: 1rem;
+    }
+  }
+  @media screen and (min-width: 600px) and (max-width: 1024px) {
+    article:nth-child(4) {
+        //border-right: 1px solid #4d4d4d;
+        padding-right: 1rem;
+      }
+    article:nth-child(8) {
+      grid-area: 4/2/8/3;
+      padding-right: 1rem;
+    }
+  }
+  @media screen and (min-width: 1025px) {
+    article:nth-child(8) {
+      grid-area: 1/4/4/-1;
+    }
+  }
+  @media screen and (min-width: 1025px) {
+    article:nth-child(4n+3) {
+      border-bottom: 0;
+    }
+  }
+
+  @media screen and (min-width: 1025px) {
+    article:nth-child(4) {
+      //border-right: 1px solid #4d4d4d;
+      padding-right: 1rem;
+    }
+    article:nth-child(8) {
+        padding-right: 1rem;
+    }
+  }

@@ -1,0 +1,142 @@
+
+.header-bar{
+    max-width: 100%;
+    //@function: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: $gray-darker;
+    padding: 10px;
+   
+}
+
+.brand {
+  width: 65%;
+  max-width: 65%;
+  font-family: $title-font-light;
+  font-size: 25px;
+  font-weight: bolder;
+  color: $gray-light;
+  text-decoration: none;
+ }
+.brand:visited {
+  color: $gray-light  ;
+}
+
+.menu-container{
+  max-width: 30%;
+  width: 30%;
+  //background-color: brown;
+  text-align: right;
+  
+}
+
+//Aunque no se vea es imprescindible el checkbox para que registre cuando se clica.
+// Los elementos label (clase check) y nav (clase menu) DEBEN de ser hermanos.
+// Deben ser hermano para que se pueda usar el selector ~  
+#check-menu{
+  display: none;
+ //display: block;
+}
+.header-bar label{
+  display: block;
+  //background-color: blue;
+  padding: 5px;
+}
+
+.header-bar label:hover{
+  cursor: pointer;
+  background-color: $gray-medium;
+}
+
+.header-bar label img{
+  width: 48px;
+}
+
+//selector a font awesome que funciona aunque sea ::after
+//probar como sustituto de img (la imagen)
+.header-bar label .fa-bars{
+  font-size: 48px;
+  color: $gray-light;
+}
+
+.menu{
+  position: absolute;
+  width: 30%;
+  //como la position es absolute respecto al menu container
+  //hay que ajustar el margen superior al padding del header-bar
+  //rellenando el hueco
+  margin-top: 10px;
+  text-align: right;
+  visibility: hidden;
+  z-index: 50;
+}
+
+.menu ul{
+  display:flex;
+  flex-direction: column;
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  background-color: $gray-darker-trans;
+  
+}
+
+.menu ul li:hover{
+  background-color: $gray-medium-trans;
+}
+
+.menu ul a{
+  display: block;
+  padding: 5px 5px;
+  text-decoration: none;
+  text-transform: capitalize;
+  color: $gray-light;
+}
+
+// Para conseguir el simbolo ~ hay que pulsar ALT+126
+//Son lo selectores hermanos
+#check-menu:checked ~ .menu {
+  visibility: visible;
+}
+
+
+// ---- A partir de un tamaño de tablet
+@media only screen and (min-width: 768px){
+  //Quitamos (no ocultamos) el icono ☰
+  .header-bar label{
+    display: none;
+  }
+  //redimensionamos los contenedores de la barra
+    .brand {
+      width: 50%;
+      max-width: 50%;
+  }
+  .menu-container{
+    max-width: 50%;
+    width: 50%;
+    
+  }
+  // mostramos el menu y lo integramos en la barra.
+  .menu{
+    width: 100%;
+    visibility: visible;
+    position: relative;
+    
+  }  
+  .menu ul{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .menu li{
+    flex-grow: 1;
+  }
+  .menu ul li a{
+    //empujamos hacia arriba con el padding botton
+    // para que se alinee verticalmente.
+    padding-bottom: 15px;
+    }
+
+} //final mediaquery Tablet
+
