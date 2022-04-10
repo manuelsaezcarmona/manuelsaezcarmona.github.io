@@ -110,10 +110,129 @@
   src: url("../fonts/Syncopate/Syncopate-Bold.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Raleway/static/Raleway-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Raleway/static/Raleway-MediumItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Raleway/static/Raleway-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Raleway/static/Raleway-MediumItalic.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: lighter;
+  src: url("../fonts/Raleway/static/Raleway-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: lighter;
+  src: url("../fonts/Raleway/static/Raleway-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Lato/Lato-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Lato/Lato-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Lato/Lato-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Lato/Lato-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: lighter;
+  src: url("../fonts/Lato/Lato-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: lighter;
+  src: url("../fonts/Lato/Lato-LightItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/Nunito/Nunito-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: normal;
+  src: url("../fonts/Nunito/Nunito-Italic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: bold;
+  src: url("../fonts/Nunito/Nunito-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: bold;
+  src: url("../fonts/Nunito/Nunito-BoldItalic.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: lighter;
+  src: url("../fonts/Nunito/Nunito-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: lighter;
+  src: url("../fonts/Nunito/Nunito-LightItalic.ttf") format("truetype");
+}
+
 //Variables de las fuentes
 $title-font: "Galanda Moderna", courier;
 $title-font-light: "Galanda Moderna Light";
-$title-page: "Baloo Bhai 2";
+$title-page: "Raleway";
 $title-section: "Righteous";
 $parrafo: "Jambetica", Verdana;
 $font-menu: "Syncopate", courier;
