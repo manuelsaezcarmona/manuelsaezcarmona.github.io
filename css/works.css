@@ -5,21 +5,21 @@
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .work-container .work-thumb {
   width: 200px;
   height: 200px;
-  border-radius: 20px;
+
   overflow: hidden;
   background-color: #ffffff;
   /*Propiedad de profundidad cuanto mayor sea el valor estara en la 
@@ -27,7 +27,7 @@
     es numerarlos de 10 en 10 por si necesitamos capas intermedias*/
   z-index: 20;
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
 }
 
 .work-container .work-thumb img {
@@ -35,12 +35,12 @@
   height: 100%;
   /*Opcional filtros, en mi caso los quiero poner en escala de grises*/
   -webkit-filter: grayscale(100%);
-          filter: grayscale(100%);
+  filter: grayscale(100%);
 }
 
 .work-container .work-thumb img:hover {
   -webkit-filter: grayscale(0%) saturate(1.5);
-          filter: grayscale(0%) saturate(1.5);
+  filter: grayscale(0%) saturate(1.5);
   -webkit-transition: all 1s ease-in-out 0.3s;
   transition: all 1s ease-in-out 0.3s;
 }
@@ -58,15 +58,15 @@
   text-align: justify;
   background-color: #ffffff;
   z-index: 10;
-  border-radius: 20px;
+
   -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.5);
   cursor: default;
 }
 
 .etiqueta {
   background-color: #cccccc;
-  border-radius: 50px;
+
   font-size: 12px;
   margin: 10;
   color: #fff;
@@ -109,9 +109,15 @@
 .work-btn {
   float: right;
   text-decoration: none;
-  background-image: -webkit-gradient(linear, left top, right top, from(#6fc6a9), to(#058ba9));
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(#6fc6a9),
+    to(#058ba9)
+  );
   background-image: linear-gradient(90deg, #6fc6a9, #058ba9);
-  border-radius: 20px;
+
   padding: 10px 20px;
   font-size: 1.1rem;
   color: #ffffff;
@@ -121,8 +127,8 @@
   .work-container {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
   }
   .work-container .work-content {
     width: 100%;
