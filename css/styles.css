@@ -1002,6 +1002,10 @@ span {
   font-size: 30px;
 }
 
+.work-title {
+  font-family: "Lato";
+}
+
 .etiqueta {
   background-color: #cccccc;
   font-size: 12px;
@@ -1798,7 +1802,7 @@ sin necesidad de usar bootstrap*/
 }
 
 .input-container .etiq {
-  font-family: "Righteous";
+  font-family: "Lato";
   font-size: 11px;
   text-transform: uppercase;
   line-height: 1.2;
